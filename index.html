@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Compras Semanais</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>Calculadora de Compras Semanais</h1>
+    <h3>Coloque sua alimentação diária e te daremos a lista de compras pra semana</h3>
+    <p>Evite desperdícios, economize e coma uma alimentação completa!</p>
+    <div class="meal-columns">
+        <div class="meal-column">
+            <div class="meal-section" id="breakfast-section">
+                <h2>Café da Manhã</h2>
+                <div class="input-group">
+                    <label for="breakfast-item">Item:</label>
+                    <input type="text" id="breakfast-item" placeholder="Ex: Pão, Leite">
+                </div>
+                <div class="input-group">
+                    <label for="breakfast-quantity">Quantidade:</label>
+                    <input type="number" id="breakfast-quantity" placeholder="Ex: 7">
+                </div>
+                <div class="input-group">
+                    <label for="breakfast-unit">Unidade:</label>
+                    <select id="breakfast-unit">
+                        <option value="gramas">gramas</option>
+                        <option value="ml">ml</option>
+                        <option value="colher de sopa">colher de sopa</option>
+                        <option value="colher de chá">colher de chá</option>
+                        <option value="unidade">unidade</option>
+                        <option value="fatia">fatia</option>
+                    </select>
+                </div>
+                <button class="add-button" onclick="addItem('breakfast')">Adicionar</button>
+                <ul id="breakfast-list"></ul>
+            </div>
+
+            <div class="meal-section" id="lunch-section">
+                <h2>Almoço</h2>
+                <div class="input-group">
+                    <label for="lunch-item">Item:</label>
+                    <input type="text" id="lunch-item" placeholder="Ex: Arroz, Feijão">
+                </div>
+                <div class="input-group">
+                    <label for="lunch-quantity">Quantidade:</label>
+                    <input type="number" id="lunch-quantity" placeholder="Ex: 7">
+                </div>
+                <div class="input-group">
+                    <label for="lunch-unit">Unidade:</label>
+                    <select id="lunch-unit">
+                        <option value="gramas">gramas</option>
+                        <option value="ml">ml</option>
+                        <option value="colher de sopa">colher de sopa</option>
+                        <option value="colher de chá">colher de chá</option>
+                        <option value="unidade">unidade</option>
+                        <option value="fatia">fatia</option>
+                    </select>
+                </div>
+                <button class="add-button" onclick="addItem('lunch')">Adicionar</button>
+                <ul id="lunch-list"></ul>
+            </div>
+        </div>
+
+        <div class="meal-column">
+            <div class="meal-section" id="snack-section">
+                <h2>Café da Tarde</h2>
+                <div class="input-group">
+                    <label for="snack-item">Item:</label>
+                    <input type="text" id="snack-item" placeholder="Ex: Biscoito, Suco">
+                </div>
+                <div class="input-group">
+                    <label for="snack-quantity">Quantidade:</label>
+                    <input type="number" id="snack-quantity" placeholder="Ex: 7">
+                </div>
+                <div class="input-group">
+                    <label for="snack-unit">Unidade:</label>
+                    <select id="snack-unit">
+                        <option value="gramas">gramas</option>
+                        <option value="ml">ml</option>
+                        <option value="colher de sopa">colher de sopa</option>
+                        <option value="colher de chá">colher de chá</option>
+                        <option value="unidade">unidade</option>
+                        <option value="fatia">fatia</option>
+                    </select>
+                </div>
+                <button class="add-button" onclick="addItem('snack')">Adicionar</button>
+                <ul id="snack-list"></ul>
+            </div>
+
+            <div class="meal-section" id="dinner-section">
+                <h2>Jantar</h2>
+                <div class="input-group">
+                    <label for="dinner-item">Item:</label>
+                    <input type="text" id="dinner-item" placeholder="Ex: Salada, Carne">
+                </div>
+                <div class="input-group">
+                    <label for="dinner-quantity">Quantidade:</label>
+                    <input type="number" id="dinner-quantity" placeholder="Ex: 7">
+                </div>
+                <div class="input-group">
+                    <label for="dinner-unit">Unidade:</label>
+                    <select id="dinner-unit">
+                        <option value="gramas">gramas</option>
+                        <option value="ml">ml</option>
+                        <option value="colher de sopa">colher de sopa</option>
+                        <option value="colher de chá">colher de chá</option>
+                        <option value="unidade">unidade</option>
+                        <option value="fatia">fatia</option>
+                    </select>
+                </div>
+                <button class="add-button" onclick="addItem('dinner')">Adicionar</button>
+                <ul id="dinner-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <button class="generate-button" onclick="generateShoppingList()">Gerar Lista de Compras</button>
+    <div id="shopping-list"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
