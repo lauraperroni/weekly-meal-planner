@@ -7,36 +7,39 @@ body {
 
 .header {
     display: flex;
-    align-items: center; /* Alinha verticalmente no centro */
+    align-items: center;
     padding: 20px;
 }
 
 .header-image {
-    width: 50px; /* Define o tamanho da imagem */
-    height: auto; /* Mantém a proporção */
-    margin-right: 20px; /* Espaçamento à direita da imagem */
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 .header-content {
-    flex: 1; /* Ocupa o espaço restante */
+    flex: 1;
 }
 
-h1, h3, p {
-    margin: 0; /* Remove margens padrão */
+h1,
+h3,
+p {
+    margin: 0;
 }
 
-header-image {
+.header-image {
     max-width: 100px;
 }
 
 .meal-columns {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .meal-column {
     flex: 1;
+    min-width: 300px;
 }
 
 .meal-section {
@@ -71,6 +74,11 @@ header-image {
     font-size: 1em;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .add-button,
 .generate-button {
     background-color: #28a745;
@@ -82,6 +90,8 @@ header-image {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 10px;
+    margin: 20px auto;
+    width: 80%;
 }
 
 .add-button:hover,
@@ -95,7 +105,7 @@ ul {
 }
 
 ul li {
-    padding: 8px 4;
+    padding: 8px 4px;
     border-bottom: 1px solid #ddd;
     position: relative;
 }
@@ -156,4 +166,32 @@ ul li button:hover {
 
 .generate-button-pdf:hover {
     background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-image {
+        margin-bottom: 10px;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .meal-columns {
+        flex-direction: column;
+    }
+
+    .meal-column {
+        min-width: 100%;
+    }
+}
+
+.generate-button {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
 }

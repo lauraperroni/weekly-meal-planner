@@ -40,7 +40,9 @@
                         <option value="fatia">fatia</option>
                     </select>
                 </div>
-                <button class="add-button" onclick="addItem('breakfast')">Adicionar</button>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem('breakfast')">Adicionar</button>
+                </div>
                 <ul id="breakfast-list"></ul>
             </div>
 
@@ -65,7 +67,9 @@
                         <option value="fatia">fatia</option>
                     </select>
                 </div>
-                <button class="add-button" onclick="addItem('lunch')">Adicionar</button>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem('lunch')">Adicionar</button>
+                </div>
                 <ul id="lunch-list"></ul>
             </div>
         </div>
@@ -92,7 +96,9 @@
                         <option value="fatia">fatia</option>
                     </select>
                 </div>
-                <button class="add-button" onclick="addItem('snack')">Adicionar</button>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem('snack')">Adicionar</button>
+                </div>
                 <ul id="snack-list"></ul>
             </div>
 
@@ -117,13 +123,17 @@
                         <option value="fatia">fatia</option>
                     </select>
                 </div>
-                <button class="add-button" onclick="addItem('dinner')">Adicionar</button>
+                <div class="button-container">
+                    <button class="add-button" onclick="addItem('dinner')">Adicionar</button>
+                </div>
                 <ul id="dinner-list"></ul>
             </div>
         </div>
     </div>
 
-    <button class="generate-button" onclick="generateShoppingList()">Gerar Lista de Compras</button>
+    <div class="button-container">
+        <button class="generate-button" onclick="generateShoppingList()">Gerar Lista de Compras</button>
+    </div>
     <div id="shopping-list"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
