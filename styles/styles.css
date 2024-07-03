@@ -5,9 +5,28 @@ body {
     color: #333;
 }
 
+.header {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 20px;
+}
+
+.header-image {
+    width: 50px; /* Define o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+}
+
+.header-content {
+    flex: 1; /* Ocupa o espaço restante */
+}
+
 h1, h3, p {
-    text-align: center;
-    color: #444;
+    margin: 0; /* Remove margens padrão */
+}
+
+header-image {
+    max-width: 100px;
 }
 
 .meal-columns {
